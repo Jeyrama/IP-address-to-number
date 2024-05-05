@@ -53,3 +53,5 @@ function ipToNum(ip) {
 function numToIp(num) {
   return [num >>> 24, num >> 16 & 255, num >> 8 & 255, num & 255].join('.'); 
 }
+
+// or
