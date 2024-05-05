@@ -55,3 +55,11 @@ function numToIp(num) {
 }
 
 // or
+
+function ipToNum(ip) {
+  return ip.split(".").reduce((a,b) => a*256 + +b);
+}
+
+function numToIp(num) {
+  return ("00000000" + num.toString(2)).substr(-32).match(/.{8}/g).map(x => parseInt(x,2)).join('.');
+}
